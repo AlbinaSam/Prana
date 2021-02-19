@@ -1,0 +1,21 @@
+.section-title {
+  @include font(30, 37);
+  margin: 0 auto;
+  margin-bottom: 62px;
+  font-weight: normal;
+  color: $blue;
+  text-align: center;
+}
+
+@media (max-width: $desktop-min-width) {
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .section-title {
+    @include font(26, 34);
+    margin-bottom: 30px;
+  }
+}

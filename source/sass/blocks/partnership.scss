@@ -1,0 +1,157 @@
+.partnership {
+  padding: 79px 0 40px;
+  color: #ffffff;
+  background-color: $blue;
+  background-image: url("../img/form-left-bg.png"), url("../img/form-bottom-bg.png");
+  background-repeat: no-repeat;
+  background-position: left bottom -295px, right bottom -295px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/form-left-bg@2x.png"), url("../img/form-bottom-bg@2x.png");
+    background-size: 815px auto, cover;
+  }
+}
+
+.partnership__container {
+  padding-left: 143px;
+  padding-right: 143px;
+}
+
+.partnership__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.partnership__titles-wrapper {
+  width: calc(100% - 450px);
+  margin-right: auto
+}
+
+.partnership__title {
+  @include font(45, 55);
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.partnership__subtitle {
+  @include font(18, 22);
+  margin: 0;
+}
+
+.partnership__inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 392px;
+  margin-left: 20px;
+  padding-top: 10px;
+
+  input {
+    @include not-hover;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 19px 15px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      @include font(18, 22);
+      color: $dark;
+    }
+
+    &:hover,
+    &:focus {
+      @include hover;
+      box-shadow: inset 0 0 0 3px rgb(126, 177, 241);;
+    }
+  }
+}
+
+.partnership__consent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+
+  p {
+    @include font(12, 15);
+    max-width: 256px;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.partnership__button {
+  margin-bottom: 15px;
+  color: #ffffff;
+  border-color: #ffffff;
+
+  &:hover {
+    background-color: #ffffff;
+    color: $blue;
+  }
+}
+
+@media (max-width: 1120px) {
+  .partnership__container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: $desktop-min-width) {
+  .partnership__title {
+    @include font(35, 45);
+  }
+
+  .partnership__inputs-wrapper {
+    min-width: 340px;
+  }
+}
+
+
+@media (max-width: $tablet-width) {
+  .partnership {
+    padding: 40px 0 40px;
+  }
+
+  .partnership__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .partnership__titles-wrapper {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px
+  }
+
+  .partnership__title {
+    @include font(30, 38);
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .partnership__subtitle {
+    @include font(16, 18);
+    text-align: center;
+  }
+
+  .partnership__inputs-wrapper {
+    min-width: 100%;
+    margin-left: 0;
+
+    input {
+      margin-bottom: 15px;
+      padding: 13px 15px;
+
+      &::placeholder {
+        @include font(16, 18);
+      }
+    }
+  }
+}

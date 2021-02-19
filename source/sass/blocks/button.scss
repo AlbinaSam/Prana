@@ -1,0 +1,33 @@
+.button {
+  @include font(18, 22);
+  @include button-reset;
+  @include not-hover;
+  min-width: 300px;
+  padding: 15px 15px 12px;
+  font-weight: 500;
+  border: 1px solid $blue;
+  box-sizing: border-box;
+  border-radius: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $blue;
+
+  &:hover {
+    @include hover;
+    color: #ffffff;
+    background-color: $blue;
+  }
+
+  &:active {
+    border: 1px solid $dark;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .button {
+    @include font(16, 18);
+    min-width: 200px;
+    padding: 10px 20px;
+  }
+}

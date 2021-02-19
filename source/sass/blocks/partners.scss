@@ -1,0 +1,106 @@
+.partners {
+  display: flex;
+  flex-direction: column;
+  padding-top: 51px;
+  padding-bottom: 100px;
+}
+
+.partners__title {
+  margin-bottom: 38px;
+  color: $dark;
+}
+
+.partners__slider-wrapper {
+  position: relative;
+  margin-bottom: 55px;
+  padding: 0 40px;
+}
+
+.partners__slider-container {
+  overflow: hidden;
+}
+
+.partners__slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  z-index: 10;
+  outline: none;
+}
+
+.partners__slider-btn--prev {
+  left: -5px;
+}
+
+.partners__slider-btn--next {
+  right: -5px;
+}
+
+.swiper-button-disabled {
+  svg {
+    opacity: 0.1;
+  }
+}
+
+.partners__slider {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+}
+
+.partners__slide {
+  flex-shrink: 0;
+  width: 18%;
+  min-height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  &--rigla {
+    background-image: url("../img/partners/rigla.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/partners/rigla@2x.png");
+    }
+  }
+
+  &--market {
+    background-image: url("../img/partners/market.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/partners/market@2x.png");
+    }
+  }
+
+  &--aptekaru {
+    background-image: url("../img/partners/aptekaru.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/partners/aptekaru@2x.png");
+    }
+  }
+
+  &--ozon {
+    background-image: url("../img/partners/ozon.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/partners/ozon@2x.png");
+    }
+  }
+}
+
+.partners__button {
+  align-self: center;
+}
+
+@media (max-width: $tablet-width) {
+  .partners {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

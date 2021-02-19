@@ -1,0 +1,180 @@
+.user-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  a {
+    @include not-hover;
+  }
+}
+
+.user-nav__phone {
+  position: relative;
+  margin-right: 32px;
+
+  button {
+    @include not-hover;
+    @include button-reset;
+
+    &:hover {
+      @include hover;
+      opacity: 0.5;
+    }
+  }
+}
+
+.user-nav__phone-link {
+  @include not-hover;
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    @include hover;
+    opacity: 0.5;
+  }
+
+  svg {
+    display: none;
+  }
+}
+
+.user-nav__callback {
+  @include not-hover;
+  @include font(14, 17);
+  position: absolute;
+  left: 0;
+  bottom: -55px;
+  display: none;
+  min-width: 185px;
+  min-height: 51px;
+  padding: 16px 15px;
+  color: $blue;
+  background-color: #f9fbee;
+  border: 1px solid $blue;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+
+  &--show {
+    display: block;
+  }
+
+  &:hover {
+    @include hover;
+    color: rgba(0, 97, 168, 0.5);
+  }
+}
+
+.user-nav__account-link {
+  @include not-hover;
+  display: flex;
+  margin-right: 30px;
+
+  &:hover {
+    @include hover;
+    opacity: 0.5;
+  }
+}
+
+.user-nav__search {
+  @include form-reset;
+
+  label {
+    position: relative;
+    display: flex;
+  }
+
+  input[type="search"] {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    width: 200px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+
+    appearance: none;
+    @include not-hover;
+
+    &::-webkit-search-cancel-button {
+      appearance: none;
+    }
+
+    &:hover,
+    &:focus {
+      @include hover;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+      & + svg {
+        @include hover;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  svg {
+    @include not-hover;
+    &:hover {
+      @include hover;
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (max-width: 1130px) {
+  .user-nav__callback {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: $desktop-min-width) {
+  .user-nav {
+    flex-grow: 1;
+  }
+
+  .user-nav__search {
+    margin-left: auto;
+
+    input[type="search"] {
+      position: static;
+
+    }
+  }
+  .user-nav__phone-link,
+  .user-nav__search svg {
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .user-nav__callback {
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+
+  .user-nav__phone {
+    button {
+      display: none;
+    }
+  }
+  .user-nav__phone-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    svg {
+      display: flex;
+      fill: #ffffff;
+    }
+  }
+
+  .user-nav__search {
+    display: none;
+  }
+}

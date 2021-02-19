@@ -1,0 +1,183 @@
+.page-footer {
+  @include font(18, 22);
+  color: $dark;
+}
+
+.page-footer__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 55px;
+  padding-bottom: 13px;
+}
+
+.page-footer__logo {
+  @include not-hover;
+  width: 154px;
+  height: 38px;
+  margin-bottom: 44px;
+  background-image: url("../img/logo-footer.svg");
+  background-repeat: no-repeat;
+
+  &[href]:hover {
+    @include hover;
+    opacity: 0.5;
+  }
+}
+
+.page-footer__nav {
+  margin-left: 18px;
+
+  .site-nav__item {
+    margin-right: 37px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.page-footer__bottom {
+  padding: 21px 0 30px;
+  background-color: #f7f7f7;
+
+  a {
+    @include not-hover;
+
+    &:hover {
+      @include hover;
+      opacity: 0.5;
+    }
+  }
+}
+
+.page-footer__bottom__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-footer__socials {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-footer__socials-item {
+  margin-right: 19px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.page-footer__message-us,
+.page-footer__call-us {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: 18px;
+  padding-top: 5px;
+  padding-left: 36px;
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 3px;
+  }
+
+  a {
+    margin-bottom: 1px;
+    text-decoration: none;
+  }
+  span {
+    @include font(14, 17);
+  }
+}
+
+@media (max-width: $desktop-min-width) {
+  .page-footer__bottom {
+    a {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .page-footer__nav.site-nav__list {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
+    padding: 0;
+    background-color: transparent;
+
+    .site-nav__item {
+      margin-bottom: 0;
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .page-footer__message-us,
+  .page-footer__call-us {
+    margin-right: 0;
+
+    svg {
+      fill: $dark;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-footer__top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+
+  .page-footer__nav.site-nav__list {
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 0;
+    padding-top: 0;
+    padding-right: 0;
+    background-color: transparent;
+
+    .site-nav__item {
+      @include font(14, 16);
+      margin-bottom: 10px;
+      margin-right: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        padding: 5px 0;
+      }
+    }
+  }
+
+  .page-footer__bottom__container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .page-footer__socials,
+  .page-footer__message-us {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,152 @@
+.about-us__stat {
+  margin-top: -160px;
+  margin-bottom: 100px;
+  padding: 55px 158px 67px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.about-us__stat-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.about-us__stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    @include font(85, 104);
+    margin-bottom: 15px;
+    color: $orange;
+  }
+
+  p {
+    @include font(18, 22);
+    max-width: 170px;
+    margin: 0;
+    color: $dark;
+    text-align: center;
+  }
+}
+
+.about-us__title {
+  color: $blue;
+}
+
+.about-us__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 127px;
+}
+
+.about-us__item {
+ width: 43.3%;
+ margin-right: 13.4%;
+ margin-bottom: 70px;
+
+ &:nth-child(2n) {
+   margin-right: 0;
+ }
+}
+
+.about-us__item-title {
+  @include font(16, 20);
+  margin: 0;
+  margin-bottom: 5px;
+  color: $blue;
+}
+
+.about-us__item-text {
+  @include font(14, 17);
+  margin: 0;
+}
+
+@media (max-width: $desktop-min-width) {
+  .about-us__stat {
+    margin-top: -70px;
+    margin-bottom: 80px;
+    padding: 35px 80px;
+  }
+
+  .about-us__stat-item {
+
+    span {
+      @include font(60, 70);
+    }
+
+    p {
+      @include font(16, 20);
+      max-width: 150px;
+    }
+  }
+
+  .about-us__list {
+    padding: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .about-us__stat {
+    margin-bottom: 50px;
+    padding: 35px 30px;
+  }
+
+  .about-us__stat-item {
+
+    span {
+      @include font(45, 50);
+    }
+
+    p {
+      @include font(16, 20);
+    }
+  }
+
+  .about-us__list {
+    flex-direction: column;
+  }
+
+  .about-us__item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+   }
+}
+
+@media (max-width: 550px) {
+  .about-us__stat {
+    width: 80%;
+    margin: -50px auto 50px;
+    padding: 20px 20px;
+  }
+
+  .about-us__stat-list {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .about-us__stat-item {
+    margin-bottom: 15px;
+
+    span {
+      @include font(35, 40);
+      margin-bottom: 0
+    }
+
+    p {
+      @include font(14, 18);
+      max-width: 130px;
+    }
+  }
+}
